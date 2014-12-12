@@ -1,0 +1,5 @@
+sample_config_entity.ball_add:
+  route_name: sample_config_entity.ball_add
+  title: 'Add new ball'
+  appears_on:
+    - sample_config_entity.ball_list

@@ -1,0 +1,6 @@
+name: Sample Config Entity
+type: module
+description: 'Provides a Ball config entity to represent a snooker ball.'
+package: Core
+version: VERSION
+core: 8.x

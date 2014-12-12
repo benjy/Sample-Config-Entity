@@ -1,0 +1,19 @@
+sample_config_entity.ball.*:
+  type: config_entity
+  label: 'Ball'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    weight:
+      type: integer
+      label: 'Weight'
+    color:
+      type: string
+      label: 'Color'
+    point_value:
+      type: integer
+      label: 'Point value'

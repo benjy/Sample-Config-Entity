@@ -1,0 +1,32 @@
+sample_config_entity.ball_list:
+  path: '/admin/config/balls'
+  defaults:
+    # Must be the same as our config entity type id.
+    _entity_list: 'ball'
+    _title: 'Snooker Balls'
+  requirements:
+    _permission: 'administer site configuration'
+
+sample_config_entity.ball_add:
+  path: '/admin/config/ball/add'
+  defaults:
+    _entity_form: ball.default
+    _title: 'Add ball'
+  requirements:
+    _permission: 'administer site configuration'
+
+sample_config_entity.ball.edit_form:
+  path: '/admin/config/ball/manage/{ball}'
+  defaults:
+    _entity_form: ball.default
+    _title: 'Edit ball'
+  requirements:
+    _permission: 'administer site configuration'
+
+sample_config_entity.ball.delete_form:
+  path: '/admin/config/ball/manage/{ball}/delete'
+  defaults:
+    _entity_form: ball.delete
+    _title: 'Delete ball'
+  requirements:
+    _permission: 'administer site configuration'
