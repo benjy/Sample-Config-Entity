@@ -30,13 +30,20 @@ use Drupal\Core\Config\Entity\ConfigEntityBase;
  *     },
  *   },
  *   links = {
- *     "edit-form" = "sample_config_entity.ball.edit_form",
- *     "delete-form" = "sample_config_entity.ball.delete_form"
+ *     "edit-form" = "/admin/config/ball/manage/{ball}",
+ *     "delete-form" = "/admin/config/ball/manage/{ball}/delete"
  *   },
  *   entity_keys = {
  *     "id" = "id",
  *     "label" = "label",
  *     "weight" = "weight"
+ *   },
+ *   config_export = {
+ *     "id" = "id",
+ *     "label" = "label",
+ *     "weight" = "weight",
+ *     "color" = "color",
+ *     "pointValue" = "point_value",
  *   }
  * )
  */
@@ -75,7 +82,7 @@ class Ball extends ConfigEntityBase implements BallInterface {
    *
    * @var integer
    */
-  protected $point_value;
+  protected $pointValue;
 
   /**
    * {@inheritdoc}
@@ -88,6 +95,6 @@ class Ball extends ConfigEntityBase implements BallInterface {
    * {@inheritdoc}
    */
   public function getPointValue() {
-    return $this->point_value;
+    return $this->pointValue;
   }
 }
