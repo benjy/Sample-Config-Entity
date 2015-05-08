@@ -7,10 +7,10 @@
 
 namespace Drupal\sample_config_entity;
 
+use Drupal\Component\Utility\SafeMarkup;
 use Drupal\Core\Config\Entity\DraggableListBuilder;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Component\Utility\String;
 
 /**
  * Defines a class to build a listing of user ball entities.
@@ -41,8 +41,8 @@ class BallListBuilder extends DraggableListBuilder {
    */
   public function buildRow(EntityInterface $entity) {
     $row['label'] = $this->getLabel($entity);
-    $row['color'] = ['#markup' => String::checkPlain($entity->getColor())];
-    $row['point_value'] = ['#markup' => String::checkPlain($entity->getPointValue())];
+    $row['color'] = ['#markup' => SafeMarkup::checkPlain($entity->getColor())];
+    $row['point_value'] = ['#markup' => SafeMarkup::checkPlain($entity->getPointValue())];
     return $row + parent::buildRow($entity);
   }
 
