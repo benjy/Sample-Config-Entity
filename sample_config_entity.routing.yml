@@ -15,7 +15,7 @@ sample_config_entity.ball_add:
   requirements:
     _permission: 'administer site configuration'
 
-sample_config_entity.ball.edit_form:
+entity.ball.edit_form:
   path: '/admin/config/ball/manage/{ball}'
   defaults:
     _entity_form: ball.default
@@ -23,7 +23,7 @@ sample_config_entity.ball.edit_form:
   requirements:
     _permission: 'administer site configuration'
 
-sample_config_entity.ball.delete_form:
+entity.ball.delete_form:
   path: '/admin/config/ball/manage/{ball}/delete'
   defaults:
     _entity_form: ball.delete
